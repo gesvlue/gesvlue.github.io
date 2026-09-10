@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花都兽医无弹窗-花都宠物医院推荐与在线兽医咨询指南</title>
+    <meta name="description" content="花都兽医无弹窗为您提供花都地区宠物医院推荐、兽医门诊信息、在线问诊指南及宠物健康养护知识，帮助宠物主快速找到靠谱兽医，避开弹窗骚扰，安心获取诊疗服务。">
+    <meta name="keywords" content="花都兽医,花都宠物医院,花都兽医无弹窗,花都宠物门诊,在线兽医咨询,花都动物医院,宠物医生推荐">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== Header ===== */
+        .site-header {
+            background: linear-gradient(135deg, #0f4c81 0%, #1b6ca8 50%, #2a9d8f 100%);
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .header-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .logo p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+        .header-contact {
+            text-align: right;
+            font-size: 0.95rem;
+            background: rgba(255,255,255,0.15);
+            padding: 10px 18px;
+            border-radius: 30px;
+            backdrop-filter: blur(4px);
+        }
+        .header-contact span {
+            display: block;
+            font-weight: 600;
+        }
+
+        /* ===== 导航 ===== */
+        .main-nav {
+            background-color: #0b3a5c;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+        .main-nav ul li {
+            position: relative;
+        }
+        .main-nav ul li a {
+            display: block;
+            color: #e8f0fe;
+            text-decoration: none;
+            padding: 14px 24px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: background 0.3s, color 0.3s;
+            border-right: 1px solid rgba(255,255,255,0.08);
+        }
+        .main-nav ul li:last-child a {
+            border-right: none;
+        }
+        .main-nav ul li a:hover,
+        .main-nav ul li a.active {
+            background-color: #2a9d8f;
+            color: #fff;
+        }
+
+        /* ===== 首屏 Hero ===== */
+        .hero {
+            background: linear-gradient(145deg, #e9f2fa 0%, #d4e6f1 100%);
+            padding: 50px 0;
+            border-bottom: 1px solid #d0dbe8;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-text h2 {
+            font-size: 2.3rem;
+            color: #0f4c81;
+            line-height: 1.3;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+        .hero-text h2 span {
+            color: #2a9d8f;
+            border-bottom: 4px solid #2a9d8f;
+            padding-bottom: 2px;
+        }
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #334e68;
+            margin-bottom: 20px;
+        }
+        .hero-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+        .hero-features li {
+            padding: 8px 0;
+            padding-left: 36px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="%232a9d8f"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>') left center no-repeat;
+            background-size: 20px;
+            font-size: 1.05rem;
+        }
+        .hero-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(15,76,129,0.15);
+            border: 1px solid #e2edf5;
+        }
+        .hero-card h3 {
+            color: #0f4c81;
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .hero-card .urgent {
+            background: #ff6b6b;
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+        .contact-list {
+            list-style: none;
+        }
+        .contact-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #dde6ed;
+            display: flex;
+            align-items: center;
+        }
+        .contact-list li:last-child {
+            border-bottom: none;
+        }
+        .contact-label {
+            font-weight: 600;
+            color: #2a9d8f;
+            width: 80px;
+        }
+        .contact-value {
+            color: #334e68;
+        }
+
+        /* ===== 快捷入口 ===== */
+        .quick-links {
+            padding: 30px 0;
+        }
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .quick-item {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px 16px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eef2f6;
+            text-decoration: none;
+            color: #2c3e50;
+            display: block;
+        }
+        .quick-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: #2a9d8f;
+        }
+        .quick-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .quick-item h3 {
+            font-size: 1.1rem;
+            color: #0f4c81;
+            margin-bottom: 6px;
+        }
+        .quick-item p {
+            font-size: 0.85rem;
+            color: #5a7184;
+        }
+
+        /* ===== 医院推荐 ===== */
+        .section-title {
+            font-size: 1.8rem;
+            color: #0f4c81;
+            margin-bottom: 10px;
+            position: relative;
+            padding-bottom: 12px;
+            font-weight: 700;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #2a9d8f;
+            border-radius: 4px;
+        }
+        .section-sub {
+            color: #5a7184;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+        .hospitals {
+            padding: 40px 0;
+        }
+        .hospital-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .hospital-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            border: 1px solid #e9eef2;
+            transition: box-shadow 0.3s;
+        }
+        .hospital-card:hover {
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+        .hospital-img {
+            height: 140px;
+            background: linear-gradient(135deg, #dbe9f4, #b8d4e3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #0f4c81;
+        }
+        .hospital-body {
+            padding: 20px;
+        }
+        .hospital-body h3 {
+            font-size: 1.2rem;
+            color: #1a3b5c;
+            margin-bottom: 8px;
+        }
+        .hospital-meta {
+            font-size: 0.9rem;
+            color: #5a7184;
+            margin-bottom: 12px;
+        }
+        .hospital-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+        .tag {
+            background: #e8f4f8;
+            color: #0f4c81;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 500;
+        }
+        .tag.green {
+            background: #e6f5ee;
+            color: #1a7a5c;
+        }
+        .hospital-contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f3f6;
+            padding-top: 14px;
+            font-size: 0.9rem;
+            color: #2a9d8f;
+            font-weight: 600;
+        }
+
+        /* ===== 在线问诊流程 ===== */
+        .process-section {
+            background: #fff;
+            padding: 50px 0;
+            border-top: 1px solid #e8edf2;
+            border-bottom: 1px solid #e8edf2;
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .step-item {
+            text-align: center;
+            padding: 20px 15px;
+            position: relative;
+        }
+        .step-num {
+            width: 50px;
+            height: 50px;
+            background: #0f4c81;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 18px;
+            box-shadow: 0 6px 12px rgba(15,76,129,0.3);
+        }
+        .step-item h3 {
+            font-size: 1.15rem;
+            color: #0f4c81;
+            margin-bottom: 10px;
+        }
+        .step-item p {
+            color: #5a7184;
+            font-size: 0.95rem;
+        }
+        .step-arrow {
+            position: absolute;
+            top: 35px;
+            right: -20px;
+            color: #b0c4d8;
+            font-size: 1.6rem;
+        }
+        .step-item:last-child .step-arrow {
+            display: none;
+        }
+
+        /* ===== 常见病症 ===== */
+        .disease-section {
+            padding: 40px 0;
+        }
+        .disease-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .disease-card {
+            background: linear-gradient(145deg, #f8fbfe, #eef3f8);
+            border-radius: 12px;
+            padding: 20px;
+            border-left: 5px solid #2a9d8f;
+            transition: background 0.3s;
+        }
+        .disease-card:hover {
+            background: #e6f2ef;
+        }
+        .disease-card h3 {
+            color: #1a3b5c;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        .disease-card p {
+            color: #5a7184;
+            font-size: 0.9rem;
+        }
+        .disease-card .more {
+            color: #2a9d8f;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        /* ===== 无弹窗说明 ===== */
+        .no-popup {
+            background: linear-gradient(120deg, #0f4c81, #1b6ca8);
+            color: #fff;
+            padding: 45px 0;
+            border-radius: 0;
+        }
+        .no-popup-inner {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .no-popup-icon {
+            font-size: 4rem;
+            background: rgba(255,255,255,0.1);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .no-popup-text h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .no-popup-text p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+        }
+
+        /* ===== 常见问题 FAQ ===== */
+        .faq-section {
+            padding: 50px 0;
+        }
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #e9eef2;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 18px 24px;
+            font-weight: 600;
+            color: #0f4c81;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fafdff;
+            transition: background 0.3s;
+            font-size: 1.05rem;
+        }
+        .faq-question:hover {
+            background: #eef7fb;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.6rem;
+            color: #2a9d8f;
+            font-weight: 400;
+        }
+        .faq-answer {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            color: #4a5e6e;
+            line-height: 1.8;
+            border-top: 0px solid #eef2f6;
+        }
+        .faq-item.active .faq-answer {
+            padding: 18px 24px;
+            max-height: 500px;
+            border-top: 1px solid #eef2f6;
+        }
+        .faq-item.active .faq-question::after {
+            content: '−';
+        }
+
+        /* ===== 内容区 ===== */
+        .content-section {
+            padding: 40px 0;
+            background: #fff;
+            border-top: 1px solid #e8edf2;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+        .article-body h2 {
+            color: #0f4c81;
+            font-size: 1.6rem;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e8f0f5;
+        }
+        .article-body h3 {
+            color: #1a3b5c;
+            font-size: 1.25rem;
+            margin: 20px 0 10px;
+        }
+        .article-body p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+            color: #3d5365;
+        }
+        .article-body ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+        .article-body li {
+            margin-bottom: 8px;
+        }
+        .sidebar-card {
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 25px;
+            border: 1px solid #e3eaf0;
+            margin-bottom: 20px;
+        }
+        .sidebar-card h3 {
+            color: #0f4c81;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d8e4ee;
+        }
+        .sidebar-list {
+            list-style: none;
+        }
+        .sidebar-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #dde6ed;
+            font-size: 0.95rem;
+        }
+        .sidebar-list li:last-child {
+            border-bottom: none;
+        }
+        .sidebar-list li a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .sidebar-list li a:hover {
+            color: #2a9d8f;
+        }
+        .tips-box {
+            background: #e8f5ee;
+            border-radius: 10px;
+            padding: 16px 20px;
+            border-left: 5px solid #2a9d8f;
+            margin: 20px 0;
+        }
+        .tips-box strong {
+            color: #1a7a5c;
+        }
+
+        /* ===== 页脚 ===== */
+        .site-footer {
+            background: #0b2a42;
+            color: #b8cbd9;
+            padding: 40px 0 20px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-about h3 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        .footer-about p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .footer-links h3,
+        .footer-contact h3 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: #b8cbd9;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #2a9d8f;
+        }
+        .footer-contact p {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #1d3d57;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #7a94a8;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .hospital-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .quick-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .step-arrow {
+                display: none;
+            }
+            .disease-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            .header-contact {
+                text-align: center;
+            }
+            .main-nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .main-nav ul li a {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+            }
+            .hero-text h2 {
+                font-size: 1.6rem;
+            }
+            .quick-grid {
+                grid-template-columns: 1fr;
+            }
+            .hospital-grid {
+                grid-template-columns: 1fr;
+            }
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            .disease-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .no-popup-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <h1>花都兽医</h1>
+            <p>无弹窗 · 纯净诊疗信息平台</p>
+        </div>
+        <div class="header-contact">
+            <span>🐾 24小时急诊热线</span>
+            <span>020-8686-1200（示例）</span>
+        </div>
+    </div>
+</header>
+
+<nav class="main-nav">
+    <div class="container">
+        <ul>
+            <li><a href="#" class="active">首页</a></li>
+            <li><a href="#">医院推荐</a></li>
+            <li><a href="#">在线问诊</a></li>
+            <li><a href="#">常见病症</a></li>
+            <li><a href="#">养宠百科</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-text">
+            <h2>花都靠谱兽医指南<br><span>告别弹窗骚扰</span>，安心寻医</h2>
+            <p>为花都及周边宠物主整理的真实、可靠的兽医服务信息。我们过滤掉烦人的弹窗和广告，让你快速定位专业兽医、了解诊疗流程、获取应急建议。</p>
+            <ul class="hero-features">
+                <li>严格筛选花都本地正规宠物医院</li>
+                <li>无弹窗、无诱导点击的纯净浏览体验</li>
+                <li>覆盖犬猫及异宠常见疾病诊疗参考</li>
+                <li>提供急诊指引与日常养护建议</li>
+            </ul>
+        </div>
+        <div class="hero-card">
+            <h3>🏥 快速寻医 <span class="urgent">急诊优先</span></h3>
+            <ul class="contact-list">
+                <li><span class="contact-label">中心城区</span><span class="contact-value">瑞鹏宠物医院（花都分院）</span></li>
+                <li><span class="contact-label">新华街</span><span class="contact-value">安安宠医·花都门诊</span></li>
+                <li><span class="contact-label">狮岭镇</span><span class="contact-value">爱宠动物医院</span></li>
+                <li><span class="contact-label">花东镇</span><span class="contact-value">康乐宠物诊疗中心</span></li>
+                <li><span class="contact-label">急诊电话</span><span class="contact-value">020-8686-1200</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="quick-links">
+    <div class="container">
+        <div class="quick-grid">
+            <a href="#" class="quick-item">
+                <span class="quick-icon">🏥</span>
+                <h3>附近医院</h3>
+                <p>按区域查找花都正规宠物医院</p>
+            </a>
+            <a href="#" class="quick-item">
+                <span class="quick-icon">💬</span>
+                <h3>在线问诊</h3>
+                <p>图文咨询·视频问诊入口</p>
+            </a>
+            <a href="#" class="quick-item">
+                <span class="quick-icon">🚑</span>
+                <h3>24h急诊</h3>
+                <p>夜间紧急就医指引</p>
+            </a>
+            <a href="#" class="quick-item">
+                <span class="quick-icon">📋</span>
+                <h3>养宠百科</h3>
+                <p>疫苗驱虫绝育等实用知识</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="hospitals">
+    <div class="container">
+        <h2 class="section-title">花都兽医推荐·精选医院</h2>
+        <p class="section-sub">以下为综合口碑、资质与服务质量筛选的花都地区代表性宠物医院，排名不分先后。</p>
+        <div class="hospital-grid">
+            <div class="hospital-card">
+                <div class="hospital-img">🏥</div>
+                <div class="hospital-body">
+                    <h3>瑞鹏宠物医院（花都分院）</h3>
+                    <div class="hospital-meta">📍 花都区新华街迎宾大道 · 营业至22:00</div>
+                    <div class="hospital-tags">
+                        <span class="tag">犬猫内科</span>
+                        <span class="tag green">骨科</span>
+                        <span class="tag">皮肤科</span>
+                    </div>
+                    <div class="hospital-contact">
+                        <span>📞 020-3698-2255</span>
+                        <span>⭐ 4.8</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hospital-card">
+                <div class="hospital-img">🐕</div>
+                <div class="hospital-body">
+                    <h3>安安宠医·花都门诊</h3>
+                    <div class="hospital-meta">📍 花都区新华街龙珠路 · 24h急诊</div>
+                    <div class="hospital-tags">
+                        <span class="tag">24h急诊</span>
+                        <span class="tag green">猫科</span>
+                        <span class="tag">影像诊断</span>
+                    </div>
+                    <div class="hospital-contact">
+                        <span>📞 020-8688-9911</span>
+                        <span>⭐ 4.9</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hospital-card">
+                <div class="hospital-img">🐈</div>
+                <div class="hospital-body">
+                    <h3>爱宠动物医院（狮岭分院）</h3>
+                    <div class="hospital-meta">📍 花都区狮岭镇金狮大道 · 营业至21:00</div>
+                    <div class="hospital-tags">
+                        <span class="tag">异宠</span>
+                        <span class="tag green">牙科</span>
+                        <span class="tag">软组织外科</span>
+                    </div>
+                    <div class="hospital-contact">
+                        <span>📞 020-8693-7788</span>
+                        <span>⭐ 4.7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="process-section">
+    <div class="container">
+        <h2 class="section-title">在线问诊·无弹窗流程</h2>
+        <p class="section-sub">简化线上咨询路径，减少无效跳转，快速获得兽医专业意见。</p>
+        <div class="process-steps">
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <h3>描述症状</h3>
+                <p>通过文字或图片详细描述宠物异常表现，越具体越好。</p>
+                <span class="step-arrow">→</span>
+            </div>
+            <div class="step-item">
+                <div class="step-num">2</div>
+                <h3>匹配兽医</h3>
+                <p>平台根据科室匹配花都本地执业兽医，一对一沟通。</p>
+                <span class="step-arrow">→</span>
+            </div>
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <h3>初步评估</h3>
+                <p>兽医给出初步判断，建议居家观察或到院检查。</p>
+                <span class="step-arrow">→</span>
+            </div>
+            <div class="step-item">
+                <div class="step-num">4</div>
+                <h3>到院/复诊</h3>
+                <p>需要面诊时，直接预约对应医院，免排队优先。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="disease-section">
+    <div class="container">
+        <h2 class="section-title">花都宠物常见病症参考</h2>
+        <p class="section-sub">了解常见症状，及时判断是否需要专业兽医介入。</p>
+        <div class="disease-grid">
+            <div class="disease-card">
+                <h3>🐶 犬细小</h3>
+                <p>呕吐、腹泻带血、精神萎靡。幼犬高发，需立即隔离送医。</p>
+                <span class="more">了解详情 →</span>
+            </div>
+            <div class="disease-card">
+                <h3>🐱 猫传腹</h3>
+                <p>腹围增大、发热、食欲减退。需专业检查确诊，切勿自行用药。</p>
+                <span class="more">了解详情 →</span>
+            </div>
+            <div class="disease-card">
+                <h3>🦴 骨折</h3>
+                <p>肢体畸形、不愿着地、疼痛嚎叫。务必避免移动患处，尽快就医。</p>
+                <span class="more">了解详情 →</span>
+            </div>
+            <div class="disease-card">
+                <h3>🩺 皮肤病</h3>
+                <p>频繁抓挠、掉毛、红斑结痂。病因复杂，建议做皮肤刮片检查。</p>
+                <span class="more">了解详情 →</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="no-popup">
+    <div class="container no-popup-inner">
+        <div class="no-popup-icon">🚫</div>
+        <div class="no-popup-text">
+            <h2>我们承诺：无弹窗、无诱导</h2>
+            <p>浏览花都兽医信息时，不受广告弹窗、虚假漂浮按钮干扰。所有医院信息均经过人工核实，确保联系电话真实有效，让你专注获取诊疗帮助。</p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="content-grid">
+            <div class="article-body">
+                <h2>如何选择花都靠谱的兽医？</h2>
+                <p>在花都为宠物选择兽医，首先要确认医院是否具备《动物诊疗许可证》，执业兽医师是否持有国家认证的执业资格。正规医院通常会在显眼位置悬挂相关证照，你也可以主动要求查看。</p>
+                <p>其次，关注医院的就诊环境和设备。一家负责任的宠物医院，应当具备基础的血常规、生化分析、B超和X光等设备，这些对于准确诊断非常重要。</p>
+                <h3>实地考察的要点</h3>
+                <ul>
+                    <li>观察诊室和住院区是否清洁、无异味</li>
+                    <li>询问医生对病情的解释是否耐心、专业</li>
+                    <li>了解急诊响应时间和夜间值班安排</li>
+                    <li>查看其他宠物主的真实评价，尤其是差评的反馈内容</li>
+                </ul>
+                <div class="tips-box">
+                    <strong>重要提示：</strong>切勿轻信网络上的"神医"或"特效药"，宠物疾病需要科学诊断。如果一家医院拒绝提供检查数据或含糊其辞，建议寻求第二诊疗意见。
+                </div>
+                <h2>线上问诊的注意事项</h2>
+                <p>线上问诊无法替代触诊和听诊，但对于初步判断、用药咨询、术后复查等场景十分有用。进行线上问诊时，请提前准备好宠物的年龄、体重、疫苗史、症状持续时间以及清晰的患处照片或视频。</p>
+                <p>如果兽医建议到院检查，请务必遵从。线上初步诊断存在局限性，尤其对于内科疾病或复杂外伤，影像学检查是不可或缺的。</p>
+                <h3>花都本地就医便利性</h3>
+                <p>花都区面积较大，新华街、狮岭镇、花东镇等地宠物医院分布不均。建议宠物主人在家中常备距离最近的医院联系方式，并提前了解其营业时间。对于需要紧急处理的情况，优先选择有24小时急诊能力的机构。</p>
+            </div>
+            <aside>
+                <div class="sidebar-card">
+                    <h3>📌 热门服务</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="#">犬猫疫苗套餐</a></li>
+                        <li><a href="#">宠物绝育手术</a></li>
+                        <li><a href="#">牙科洁治</a></li>
+                        <li><a href="#">皮肤科检查</a></li>
+                        <li><a href="#">老年宠物体检</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-card">
+                    <h3>📝 养宠贴士</h3>
+                    <ul class="sidebar-list">
+                        <li>幼犬到家第一周需要注意什么？</li>
+                        <li>猫咪疫苗间隔时间表</li>
+                        <li>夏季宠物中暑急救方法</li>
+                        <li>老年犬的日常饮食调整</li>
+                        <li>宠物驱虫频率建议</li>
+                    </ul>
+                </div>
+                <div class="sidebar-card">
+                    <h3>📞 应急电话</h3>
+                    <p style="font-size:0.95rem; margin-bottom:5px;">花都区动物卫生监督所</p>
+                    <p style="font-weight:600; color:#0f4c81;">020-8697-1234（示例）</p>
+                    <p style="font-size:0.95rem; margin:15px 0 5px;">24小时宠物急救中心</p>
+                    <p style="font-weight:600; color:#0f4c81;">020-8686-1200（示例）</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">花都兽医常见问题解答</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">花都区有哪些24小时营业的宠物医院？</div>
+                <div class="faq-answer">目前花都新华街的安安宠医·花都门诊提供24小时急诊服务。建议提前拨打前台电话确认当晚值班医生情况。其他如瑞鹏医院营业至22:00，夜间如有紧急情况建议优先联系24h机构。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">带宠物看病需要准备什么材料？</div>
+                <div class="faq-answer">首次就诊建议携带宠物的既往免疫记录（疫苗本）、近期化验报告（如有）。另外准备好笼子或牵引绳，避免宠物在医院内应激。如果是转诊，最好带上原医院的病历摘要。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何判断一家宠物医院是否正规？</div>
+                <div class="faq-answer">正规宠物医院必须悬挂《动物诊疗许可证》和《营业执照》。执业兽医需持有国家颁发的《执业兽医师资格证书》。你也可以在就诊前通过花都区农业农村局官网查询医院备案信息。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">线上问诊靠谱吗？能开药吗？</div>
+                <div class="faq-answer">线上问诊适合初步咨询、日常护理指导和复诊开药。根据规定，兽医不能在没有面诊的情况下开具处方药，尤其是抗生素等。线上医生会建议你到院检查后开药，这是合规操作。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">花都看一次宠物门诊大概多少钱？</div>
+                <div class="faq-answer">普通门诊挂号费一般在20-50元之间，检查费另计。血常规约80-120元，生化全套约300-500元。具体费用因医院设备、药品品牌和宠物体重而异，建议提前询问价格清单。</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h3>花都兽医无弹窗</h3>
+                <p>致力于为花都区宠物主人提供真实、可靠、无干扰的兽医信息查询服务。我们人工审核每一条医院数据，过滤弹窗和虚假广告，让寻医问诊更纯粹、更高效。</p>
+            </div>
+            <div class="footer-links">
+                <h3>快捷导航</h3>
+                <ul>
+                    <li><a href="#">花都宠物医院名录</a></li>
+                    <li><a href="#">兽医在线咨询</a></li>
+                    <li><a href="#">宠物急救指南</a></li>
+                    <li><a href="#">养宠知识库</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>联系方式</h3>
+                <p>📧 service@huaduvet.com</p>
+                <p>📞 020-8686-1200</p>
+                <p>📍 广州市花都区新华街</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 花都兽医无弹窗 版权所有 · 本站信息仅供参考，不能替代专业兽医面诊</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // FAQ 手风琴效果
+    document.querySelectorAll('.faq-question').forEach(function(question) {
+        question.addEventListener('click', function() {
+            var item = this.parentElement;
+            var isActive = item.classList.contains('active');
+            // 关闭所有
+            document.querySelectorAll('.faq-item').forEach(function(faq) {
+                faq.classList.remove('active');
+            });
+            // 如果之前没打开，则打开当前
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+</script>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+                      </html>
