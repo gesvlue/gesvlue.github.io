@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花都逆流-都市逆袭小说推荐与全文阅读指南</title>
+    <meta name="description" content="花都逆流是当下热门的都市异能逆袭题材小说，讲述平凡主角在花都中步步为营、逆流而上的传奇故事。本站提供作品介绍、角色解析、章节看点、同类书单与阅读建议。">
+    <meta name="keywords" content="花都逆流,花都逆流小说,都市逆袭,异能小说,花都小说,逆流而上,热门小说推荐">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul, ol {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部信息条 */
+        .topbar {
+            background-color: #1a2634;
+            color: #aebecd;
+            font-size: 13px;
+            padding: 8px 0;
+        }
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .topbar-links span {
+            margin-right: 18px;
+            cursor: default;
+        }
+        .topbar-links i {
+            font-style: normal;
+            color: #e8b84b;
+        }
+
+        /* 页眉 */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e6e9ee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            background: linear-gradient(135deg, #1f3a5f, #2e5c8a);
+            color: #fff;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(31,58,95,0.2);
+        }
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1f3a5f;
+            letter-spacing: 1px;
+        }
+        .logo-text span {
+            color: #e8a13a;
+        }
+
+        nav.main-nav ul {
+            display: flex;
+            gap: 30px;
+        }
+        nav.main-nav a {
+            font-size: 15px;
+            font-weight: 500;
+            color: #3a4a5a;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        nav.main-nav a:hover,
+        nav.main-nav a.active {
+            color: #1f3a5f;
+            border-bottom-color: #e8a13a;
+        }
+        .nav-cta {
+            background-color: #1f3a5f;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover {
+            background-color: #2e5c8a;
+        }
+
+        /* 移动端导航 */
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: #1f3a5f;
+            cursor: pointer;
+        }
+
+        /* 主视觉区域 */
+        .hero {
+            background: linear-gradient(135deg, #101d2c 0%, #1f3a5f 55%, #2c5275 100%);
+            color: #fff;
+            padding: 70px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            right: -100px;
+            top: -100px;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(232,161,58,0.3) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: rgba(232,161,58,0.25);
+            border: 1px solid #e8a13a;
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: #f0c985;
+        }
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+        .hero h1 span {
+            color: #e8a13a;
+        }
+        .hero-desc {
+            font-size: 17px;
+            color: #c8d6e5;
+            max-width: 550px;
+            margin-bottom: 30px;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: #e8a13a;
+            color: #1f2a36;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 15px;
+            box-shadow: 0 8px 20px rgba(232,161,58,0.3);
+            transition: all 0.25s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(232,161,58,0.4);
+        }
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.6);
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 500;
+            color: #fff;
+            transition: 0.25s;
+        }
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .hero-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .hero-card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #f0c985;
+        }
+        .hero-card .book-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .book-meta-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed rgba(255,255,255,0.2);
+            padding-bottom: 8px;
+            font-size: 14px;
+        }
+        .book-meta-item span:first-child {
+            color: #aebecd;
+        }
+
+        /* 章节 / 路径导航 */
+        .breadcrumb {
+            padding: 20px 0 0;
+            font-size: 14px;
+            color: #7f8c9b;
+        }
+        .breadcrumb a {
+            color: #1f3a5f;
+        }
+
+        /* 通用区块标题 */
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1f3a5f;
+            margin: 50px 0 10px;
+            position: relative;
+            padding-left: 18px;
+        }
+        .section-title::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 24px;
+            background: #e8a13a;
+            border-radius: 6px;
+        }
+        .section-subtitle {
+            color: #6b7a8a;
+            font-size: 15px;
+            margin-bottom: 30px;
+            border-left: 3px solid #e8a13a;
+            padding-left: 15px;
+        }
+
+        /* 书籍简介特色 */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            margin: 30px 0;
+        }
+        .intro-text h2 {
+            font-size: 26px;
+            color: #1f3a5f;
+            margin-bottom: 20px;
+        }
+        .intro-text p {
+            margin-bottom: 20px;
+            color: #3e4c5a;
+        }
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .feature-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 16px 20px;
+            border-left: 4px solid #e8a13a;
+        }
+        .feature-icon {
+            background: #1f3a5f;
+            color: #fff;
+            min-width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        .feature-item h4 {
+            font-size: 16px;
+            color: #1f3a5f;
+            margin-bottom: 4px;
+        }
+        .feature-item p {
+            font-size: 14px;
+            color: #5a6a7a;
+            margin: 0;
+        }
+
+        /* 人物角色 */
+        .characters-section {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+        }
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .char-card {
+            background: #f2f6fa;
+            border-radius: 16px;
+            padding: 25px 20px;
+            text-align: center;
+            transition: 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+        .char-card:hover {
+            transform: translateY(-4px);
+            border-bottom-color: #e8a13a;
+        }
+        .char-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #2e5c8a, #1a2f45);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        .char-card h5 {
+            font-size: 18px;
+            color: #1f3a5f;
+            margin-bottom: 6px;
+        }
+        .char-role {
+            font-size: 13px;
+            color: #e8a13a;
+            margin-bottom: 10px;
+        }
+        .char-card p {
+            font-size: 14px;
+            color: #5a6a7a;
+            line-height: 1.5;
+        }
+
+        /* 章节看点 / 剧情 */
+        .plot-section {
+            background: linear-gradient(160deg, #f0f4f9, #ffffff);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        .plot-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .plot-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+            border-top: 4px solid #2e5c8a;
+            transition: 0.2s;
+        }
+        .plot-card:nth-child(2) {
+            border-top-color: #e8a13a;
+        }
+        .plot-card:nth-child(3) {
+            border-top-color: #2e8a72;
+        }
+        .plot-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #1f3a5f;
+        }
+        .plot-card p {
+            font-size: 14px;
+            color: #4a5b6b;
+        }
+
+        /* 书单推荐 */
+        .booklist-section {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .book-card {
+            background: #fafbfd;
+            border-radius: 14px;
+            padding: 20px;
+            border: 1px solid #eef1f5;
+            transition: 0.2s;
+        }
+        .book-card:hover {
+            border-color: #b8c6d4;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+        .book-card .book-tag {
+            display: inline-block;
+            background: #eef3f8;
+            color: #1f3a5f;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+        .book-card h5 {
+            font-size: 17px;
+            color: #1f3a5f;
+            margin-bottom: 8px;
+        }
+        .book-card p {
+            font-size: 13px;
+            color: #5f6f7f;
+            line-height: 1.6;
+        }
+
+        /* 阅读指南FAQ */
+        .faq-section {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 14px;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            border-left: 4px solid #e8a13a;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #1f3a5f;
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .faq-question::before {
+            content: "Q";
+            background: #1f3a5f;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+        .faq-answer {
+            color: #4a5b6b;
+            font-size: 15px;
+            margin-left: 34px;
+        }
+
+        /* 最新动态 */
+        .news-list {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 25px;
+            margin: 20px 0;
+        }
+        .news-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed #e9eef2;
+            display: flex;
+            gap: 15px;
+            align-items: baseline;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-date {
+            background: #1f3a5f;
+            color: #fff;
+            font-size: 12px;
+            padding: 2px 10px;
+            border-radius: 20px;
+            flex-shrink: 0;
+        }
+        .news-item a {
+            font-size: 15px;
+            color: #2c3e50;
+        }
+        .news-item a:hover {
+            color: #e8a13a;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #101d2c;
+            color: #93a5b7;
+            padding: 50px 0 0;
+            margin-top: 60px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 30px;
+        }
+        .footer-about p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-top: 15px;
+            max-width: 350px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+        .footer-col ul li {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+        .footer-col ul li a:hover {
+            color: #e8a13a;
+        }
+        .copyright {
+            border-top: 1px solid #1e2f3f;
+            padding: 20px 0;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+            }
+            .hero-card {
+                max-width: 100%;
+            }
+            .intro-grid {
+                grid-template-columns: 1fr;
+                padding: 25px;
+            }
+            .plot-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                height: 60px;
+            }
+            .logo-text {
+                font-size: 18px;
+            }
+            nav.main-nav {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                padding: 20px;
+                border-radius: 0 0 12px 12px;
+            }
+            nav.main-nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .mobile-nav-toggle {
+                display: block;
+            }
+            .hero {
+                padding: 45px 0 60px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .plot-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 24px;
+            }
+            .intro-grid,
+            .plot-section,
+            .booklist-section,
+            .faq-section {
+                padding: 20px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .topbar-links span {
+                margin-right: 8px;
+                font-size: 12px;
+            }
+            .hero-actions {
+                flex-direction: column;
+            }
+            .btn-primary, .btn-outline {
+                text-align: center;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <!-- 顶部信息条 -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-links">
+                <span>🌆 花都逆流 书友站</span>
+                <span>📖 都市逆袭</span>
+                <span>✨ 全网推荐</span>
+            </div>
+            <div>欢迎来到花都逆流小说专题</div>
+        </div>
+    </div>
+
+    <!-- 头部导航 -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon">逆</div>
+                <div class="logo-text">花都<span>逆流</span></div>
+            </div>
+            <button class="mobile-nav-toggle" id="mobileMenuBtn" aria-label="菜单">☰</button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#intro" class="active">作品简介</a></li>
+                    <li><a href="#characters">主要人物</a></li>
+                    <li><a href="#plot">剧情看点</a></li>
+                    <li><a href="#booklist">同类书单</a></li>
+                    <li><a href="#faq">阅读FAQ</a></li>
+                    <li><a href="#news">动态</a></li>
+                </ul>
+            </nav>
+            <a href="#booklist" class="nav-cta" style="display: inline-block;">开始阅读</a>
+        </div>
+    </header>
+
+    <!-- 主视觉 Hero -->
+    <section class="hero">
+        <div class="container">
+            <div>
+                <span class="hero-tag">🔥 都市逆袭 · 异能觉醒</span>
+                <h1>花都<span>逆流</span></h1>
+                <p class="hero-desc">
+                    在繁花似锦的都市暗流中，一个普通青年偶获神秘古玉，从此命运逆转。他凭借智慧与胆识，在商界、地下势力与家族恩怨中逆流而上，书写属于自己的传奇。
+                </p>
+                <div class="hero-actions">
+                    <a href="#intro" class="btn-primary">📖 探索故事</a>
+                    <a href="#booklist" class="btn-outline">查看同款书单</a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <h3>📕 作品档案</h3>
+                <div class="book-meta">
+                    <div class="book-meta-item"><span>作品名称</span><span>花都逆流</span></div>
+                    <div class="book-meta-item"><span>题材类型</span><span>都市 / 异能 / 逆袭</span></div>
+                    <div class="book-meta-item"><span>主角设定</span><span>林尘 · 古玉传承者</span></div>
+                    <div class="book-meta-item"><span>故事背景</span><span>现代繁华都市</span></div>
+                    <div class="book-meta-item"><span>核心看点</span><span>商战、武学、情感</span></div>
+                    <div class="book-meta-item"><span>推荐指数</span><span>⭐⭐⭐⭐⭐</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <!-- 面包屑 -->
+            <div class="breadcrumb">
+                <a href="#">首页</a> &gt; <a href="#">小说</a> &gt; <span>花都逆流</span>
+            </div>
+
+            <!-- 作品简介 + 特色 -->
+            <section id="intro" class="intro-grid">
+                <div class="intro-text">
+                    <h2>《花都逆流》讲的是什么？</h2>
+                    <p>
+                        《花都逆流》是一部以现代都市为背景的逆袭题材小说。主角林尘本是一名普通职员，在一次意外中获得了一枚能够开启上古传承的神秘古玉。从此，他的人生发生了翻天覆地的变化：不仅能看透人心，还习得绝世武学与医道秘术。
+                    </p>
+                    <p>
+                        故事围绕林尘在“花都”这座繁华大都市中的闯荡展开。他凭借过人的胆识和特殊能力，一步步化解来自商业对手、地下势力以及世家门阀的层层危机。在这座充满机遇与陷阱的城市里，他始终坚守本心，逆流而上，最终成为屹立巅峰的传奇人物。
+                    </p>
+                    <p>
+                        作品融合了都市商战、热血打斗、悬疑探秘和情感纠葛等元素，节奏明快，爽点密集，让读者在阅读过程中感受到主角不断突破、逆袭翻盘的畅快。
+                    </p>
+                </div>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div>
+                            <h4>逆袭成长线</h4>
+                            <p>从底层职员到都市枭雄，每一步都充满挑战与机遇，看主角如何步步为营。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🌀</div>
+                        <div>
+                            <h4>异能古玉设定</h4>
+                            <p>古玉蕴含神秘传承，赋予主角医术、武学与非凡洞察力，设定新颖不突兀。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🏙️</div>
+                        <div>
+                            <h4>花都风云</h4>
+                            <p>商界博弈、地下势力、家族恩怨交织，呈现真实而复杂的都市生态。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">❤️</div>
+                        <div>
+                            <h4>情感温度</h4>
+                            <p>红颜知己、兄弟情义、亲情守护，为硬核剧情增添细腻情感。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 主要人物 -->
+            <section id="characters" class="characters-section">
+                <h3 class="section-title">主要人物</h3>
+                <p class="section-subtitle">他们共同构成了《花都逆流》的精彩世界</p>
+                <div class="char-grid">
+                    <div class="char-card">
+                        <div class="char-avatar">林</div>
+                        <h5>林尘</h5>
+                        <div class="char-role">主角 · 逆袭者</div>
+                        <p>原本平凡，意外获得古玉后觉醒。性格坚毅，重情重义，遇强则强。</p>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">苏</div>
+                        <h5>苏婉清</h5>
+                        <div class="char-role">女主 · 商业才女</div>
+                        <p>花都知名企业总裁之女，聪慧优雅，与林尘在风雨中相互扶持。</p>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">秦</div>
+                        <h5>秦烈</h5>
+                        <div class="char-role">挚友 · 武学奇才</div>
+                        <p>地下拳场出身，豪爽仗义，是林尘最可信赖的兄弟与战力伙伴。</p>
+                    </div>
+                    <div class="char-card">
+                        <div class="char-avatar">赵</div>
+                        <h5>赵天鸿</h5>
+                        <div class="char-role">反派 · 商界枭雄</div>
+                        <p>表面儒雅，实则心狠手辣。多次设局打压林尘，是前期最大对手。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 剧情看点 / 章节亮点 -->
+            <section id="plot" class="plot-section">
+                <h3 class="section-title">剧情看点</h3>
+                <p class="section-subtitle">从古玉觉醒到花都称雄，四大阶段不容错过</p>
+                <div class="plot-grid">
+                    <div class="plot-card">
+                        <h4>🔹 古玉觉醒 · 初露锋芒</h4>
+                        <p>林尘意外激活古玉，获得透视与医术传承。在同学聚会中一鸣惊人，开始接触花都上流圈层，同时引来神秘势力的窥探。</p>
+                    </div>
+                    <div class="plot-card">
+                        <h4>🔸 商海博弈 · 步步为营</h4>
+                        <p>为守护身边人，林尘创立自己的商业版图。与赵天鸿等老牌势力展开股权暗战、项目争夺，多次险象环生，却总能化险为夷。</p>
+                    </div>
+                    <div class="plot-card">
+                        <h4>🔹 武学传承 · 以武会友</h4>
+                        <p>古玉中隐藏的武学功法逐渐揭晓，林尘踏入地下武斗场，结识秦烈等高手。面对境外势力的挑衅，他毅然出手，扬我国威。</p>
+                    </div>
+                    <div class="plot-card">
+                        <h4>🔸 情感纠葛 · 守护初心</h4>
+                        <p>苏婉清的温柔、女警的英姿、青梅竹马的默默守候……多段情感线细腻展开。林尘在权力与初心之间，始终选择守护珍视之人。</p>
+                    </div>
+                    <div class="plot-card">
+                        <h4>🔹 真相浮现 · 古玉之谜</h4>
+                        <p>古玉的来历、家族的旧怨、二十年前的秘密逐渐浮出水面。原来林尘的逆流之路，早被一双无形之手悄然推动。</p>
+                    </div>
+                    <div class="plot-card">
+                        <h4>🔸 巅峰对决 · 花都之王</h4>
+                        <p>所有恩怨在最终时刻爆发。林尘整合所有力量，与幕后黑手展开终极对决，最终还花都一片清明，成为真正的都市传奇。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 同类书单推荐 -->
+            <section id="booklist" class="booklist-section">
+                <h3 class="section-title">喜欢《花都逆流》？这些同类小说也值得一读</h3>
+                <p class="section-subtitle">精选都市逆袭、异能爽文，风格相近，口碑良好</p>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <span class="book-tag">都市异能</span>
+                        <h5>都市之古玉传承</h5>
+                        <p>主角同样获得神秘古玉，在都市中开启医武双修之路，剧情环环相扣。</p>
+                    </div>
+                    <div class="book-card">
+                        <span class="book-tag">商战逆袭</span>
+                        <h5>重生之商业帝国</h5>
+                        <p>重生回到十年前，凭借先知先觉打造商业帝国。商战描写细腻，爽感十足。</p>
+                    </div>
+                    <div class="book-card">
+                        <span class="book-tag">热血打斗</span>
+                        <h5>花都兵王</h5>
+                        <p>退役兵王回归都市，守护兄弟家人。拳拳到肉的打斗与铁血柔情并存。</p>
+                    </div>
+                    <div class="book-card">
+                        <span class="book-tag">医道圣手</span>
+                        <h5>都市医仙</h5>
+                        <p>身怀绝世医术的主角低调入世，悬壶济世的同时，也搅动各方风云。</p>
+                    </div>
+                    <div class="book-card">
+                        <span class="book-tag">家族恩怨</span>
+                        <h5>绝世高手在都市</h5>
+                        <p>隐世高手重回都市，却因家族旧怨卷入巨大漩涡，实力深不可测。</p>
+                    </div>
+                    <div class="book-card">
+                        <span class="book-tag">逆袭爽文</span>
+                        <h5>超级医仙在都市</h5>
+                        <p>从被轻视的赘婿到震惊全城的医仙，逆袭之路酣畅淋漓，适合一口气读完。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 阅读指南 FAQ -->
+            <section id="faq" class="faq-section">
+                <h3 class="section-title">关于《花都逆流》的常见问题</h3>
+                <p class="section-subtitle">帮助你快速了解这部作品</p>
+                
+                <div class="faq-item">
+                    <div class="faq-question">《花都逆流》目前更新稳定吗？大概有多少字？</div>
+                    <div class="faq-answer">根据公开信息，该作品处于连载或已完结状态，具体字数与更新频率取决于发布平台。建议关注官方阅读渠道，以获取最新章节和准确信息。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">主角林尘的能力会不会过于无敌，失去平衡？</div>
+                    <div class="faq-answer">作品在设定上有所克制。古玉传承虽强，但主角面对的是整个花都盘根错节的势力，且每次动用能力都有一定限制或代价。作者通过层层强敌和智斗情节，保持了故事的张力和可读性。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">这部小说适合哪类读者？</div>
+                    <div class="faq-answer">如果你喜欢都市背景、主角逆袭、带点异能设定的爽文，并且不排斥商战、武打和情感多线剧情，那么《花都逆流》会是一部很对胃口的选择。节奏明快，不拖沓。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">有没有类似风格的作品可以推荐？</div>
+                    <div class="faq-answer">上方“同类书单”中列出了六本风格相近的小说，涵盖都市异能、商战、兵王等题材。读者可以根据自己的偏好挑选，基本不会踩雷。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">阅读《花都逆流》需要付费吗？</div>
+                    <div class="faq-answer">具体阅读方式取决于发布平台规则。部分平台提供免费试读章节，后续章节可能需要订阅或购买。请以平台实际政策为准。</div>
+                </div>
+            </section>
+
+            <!-- 最新动态 -->
+            <section id="news">
+                <h3 class="section-title">花都逆流 · 最新动态</h3>
+                <p class="section-subtitle">书友圈热门讨论与作品相关资讯</p>
+                <div class="news-list">
+                    <div class="news-item">
+                        <span class="news-date">近期</span>
+                        <a href="#">书友热议：林尘最终会选择与谁共度余生？</a>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">推荐</span>
+                        <a href="#">盘点《花都逆流》中最燃的三大打斗场面</a>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">讨论</span>
+                        <a href="#">如果古玉出现在现实世界，你会如何使用？</a>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">书单</span>
+                        <a href="#">五本与《花都逆流》一样让人上头的都市小说</a>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">活动</span>
+                        <a href="#">同人创作征集：画出你心中的花都风云人物</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h4 style="color: #fff; font-size: 20px;">🌆 花都逆流书友站</h4>
+                    <p>一个专注于《花都逆流》及都市逆袭类小说的推荐与交流平台。我们致力于为书友提供最优质的小说导读、角色解析与书单分享。本站内容基于公开资料整理，仅供交流学习。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#intro">作品简介</a></li>
+                        <li><a href="#characters">主要人物</a></li>
+                        <li><a href="#plot">剧情看点</a></li>
+                        <li><a href="#booklist">同类书单</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>阅读支持</h4>
+                    <ul>
+                        <li><a href="#faq">常见问题</a></li>
+                        <li><a href="#news">最新动态</a></li>
+                        <li><a href="#">官方正版渠道</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li>📱 书友交流群</li>
+                        <li>📧 联系邮箱</li>
+                        <li>🔍 作品百科</li>
+                        <li>📚 更多书单</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 花都逆流专题站 · 本站为书友交流站点，请支持正版小说
+            </div>
+        </div>
+    </footer>
+
+    <!-- 移动端导航切换 -->
+    <script>
+        (function() {
+            var btn = document.getElementById('mobileMenuBtn');
+            var nav = document.getElementById('mainNav');
+            if (btn && nav) {
+                btn.addEventListener('click', function() {
+                    if (nav.style.display === 'flex') {
+                        nav.style.display = 'none';
+                    } else {
+                        nav.style.display = 'flex';
+                    }
+                });
+                // 点击导航链接后自动收起
+                var links = nav.getElementsByTagName('a');
+                for (var i = 0; i < links.length; i++) {
+                    links[i].addEventListener('click', function() {
+                        if (window.innerWidth <= 768) {
+                            nav.style.display = 'none';
+                        }
+                    });
+                }
+            }
+        })();
+    </script>
+
+</body>
+  </html>
